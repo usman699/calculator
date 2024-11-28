@@ -14,6 +14,7 @@
 		05BE0A912CF82D65009F08D8 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A902CF82D65009F08D8 /* calculatorTests.swift */; };
 		05BE0A9B2CF82D65009F08D8 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A9A2CF82D65009F08D8 /* calculatorUITests.swift */; };
 		05BE0A9D2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A9C2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift */; };
+		05BE0AAD2CF83827009F08D8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0AAC2CF83827009F08D8 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		05BE0A962CF82D65009F08D8 /* calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BE0A9A2CF82D65009F08D8 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		05BE0A9C2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05BE0AAC2CF83827009F08D8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		05BE0A7E2CF82D64009F08D8 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				05BE0AA92CF837E1009F08D8 /* utils */,
 				05BE0A7F2CF82D64009F08D8 /* calculatorApp.swift */,
 				05BE0A812CF82D64009F08D8 /* ContentView.swift */,
 				05BE0A832CF82D65009F08D8 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				05BE0A9C2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift */,
 			);
 			path = calculatorUITests;
+			sourceTree = "<group>";
+		};
+		05BE0AA92CF837E1009F08D8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				05BE0AAC2CF83827009F08D8 /* CustomButton.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			files = (
 				05BE0A822CF82D64009F08D8 /* ContentView.swift in Sources */,
 				05BE0A802CF82D64009F08D8 /* calculatorApp.swift in Sources */,
+				05BE0AAD2CF83827009F08D8 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

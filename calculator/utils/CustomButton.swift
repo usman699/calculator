@@ -1,18 +1,21 @@
-//
-//  CustomButton.swift
-//  calculator
-//
-//  Created by Spark M1 on 28/11/2024.
-//
-
 import SwiftUI
 
-struct CustomButton: View {
+struct CustomButton :View {
+    var title1:String
+    var action:(() -> Void)
+    var background:Color
+    var forgroundColor :Color
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action){
+            HStack{
+                Text(title1)
+            }
+        }
+        
+        .frame(width: 60, height: 60)
+        .background(background)
+        .foregroundStyle(forgroundColor)
+        .clipShape(Circle())
+        .font(. system(size: 22))
     }
-}
-
-#Preview {
-    CustomButton()
 }

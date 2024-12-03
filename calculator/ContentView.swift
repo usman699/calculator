@@ -1,115 +1,67 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    let numberOfRows: CGFloat = 5
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        
+    let buttons = [
+        ["7", "8", "9", "÷"],
+        ["4", "5", "6", "×"],
+        ["1", "2", "3", "-"],
+        ["C", "0", "="]
     ]
     
     var body: some View {
-       
-       // Set spacing to 0 for compact layout
-            VStack {
-               
-                Color.black.opacity(0.8)
-                GeometryReader { geo in
-                    
-                    
-                    LazyVGrid(columns: columns) {
-                    
-                    
-                        CustomButton(title1: "AC", action: {}, background: Color.secondary, forgroundColor: Color.white)
-                        CustomButton(title1: "+/-", action: {}, background: Color.secondary, forgroundColor: Color.white)
-                        CustomButton(title1: "%", action: {}, background: Color.secondary, forgroundColor: Color.white)
-                        CustomButton(title1: "÷", action: {}, background: Color.secondary, forgroundColor: Color.white)
-                        ForEach(7..<10) { i in
-                            CustomButton(title1: i.description, action: {}, background: Color.secondary.opacity(0.8), forgroundColor: Color.white)
-                        }
-                        CustomButton(title1: "x", action: {}, background: Color.orange, forgroundColor: Color.white)
-          
-                        ForEach(4..<7) { i in
-                            CustomButton(title1: i.description, action: {}, background: Color.secondary.opacity(0.8), forgroundColor: Color.white)
-                        }
-                        CustomButton(title1: "-", action: {}, background: Color.orange, forgroundColor: Color.white)
-                 
-                        ForEach(1..<4) { i in
-                            CustomButton(title1: i.description, action: {}, background: Color.secondary.opacity(0.8), forgroundColor: Color.white)
-                        }
-                        CustomButton(title1: "+", action: {}, background: Color.orange, forgroundColor: Color.white)
-                        
-                        CustomButtonlarge(title1: "0", action: {}, background: Color.secondary.opacity(0.8), forgroundColor: Color.white)
-                            .frame(width: geo.size.width * 0.5 - 15, height: 60)
-                           
-                                    
-                        CustomButton(title1: ".", action: {}, background: Color.secondary.opacity(0.8), forgroundColor: Color.white)
-                        CustomButton(title1: "=", action: {}, background: Color.orange, forgroundColor: Color.white)
-                        
-                        
-                        
-                        
-                        
-                    }
-                    
-                }
-                            
-                        }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                 .background(Color.black)
-                 .ignoresSafeArea(edges: .bottom)
-                    }
         
+        GeometryReader { geometry in
+            VStack  {
+             
+                
+                HStack {
+                    VStack{
+                        // Header text
+                        Text("Calculator")
+                            .foregroundColor(.white)
+                            .font(.system(size: 35))
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .trailing)  // Aligns text to the trailing edge
+                        
+                        // Divider (Optional)
+                        Color.gray.frame(height: 1).padding(.vertical)
+                        
+                    }
                 }
-    
-    
+                
+                
+                ForEach(buttons ,id: \.self) {row in
+                    HStack(spacing:12){
+                        ForEach(row , id: \.self) { button in
+                            if button == "C" {
+                                CustomButton(title: button, action: {}, background: .gray)
+                                    
+                            }
+                            else if button == "-" || button == "=" || button == "×" || button == "÷"  {
+                                CustomButton(title: button, action: {}, background: .orange)
+                            }
+                            else {
+                                CustomButton(title: button, action: {}, background: .gray)
+                            }
+                        }
+                    }
+                    
+             
+                }
+              
+            }
+            .padding()
+           
+            .ignoresSafeArea()
+            
+            .frame(maxWidth: .infinity , maxHeight: .infinity)
+            .background(Color.black)
+            
+        }
+        
+    }
+}
 
-
-//    Grid {
-//        // First row
-//        GridRow {
-//            CustomButton(title1: "AC", action: {}, background: Color.secondary, forgroundColor: Color.white)
-//            CustomButton(title1: "+/-", action: {}, background: Color.secondary, forgroundColor: Color.white)
-//            CustomButton(title1: "%", action: {}, background: Color.secondary, forgroundColor: Color.white)
-//            CustomButton(title1: "÷", action: {}, background: Color.orange, forgroundColor: Color.white)
-//        }
-//        
-//        // Second row
-//        GridRow {
-//            ForEach(7..<10) { i in
-//                CustomButton(title1: i.description, action: {}, background: Color.gray.opacity(0.8), forgroundColor: Color.white)
-//            }
-//            CustomButton(title1: "x", action: {}, background: Color.orange, forgroundColor: Color.white)
-//        }
-//        
-//        // Third row
-//        GridRow {
-//            ForEach(4..<7) { i in
-//                CustomButton(title1: i.description, action: {}, background: Color.gray.opacity(0.8), forgroundColor: Color.white)
-//            }
-//            CustomButton(title1: "-", action: {}, background: Color.orange, forgroundColor: Color.white)
-//        }
-//        
-//        // Fourth row
-//        GridRow {
-//            ForEach(1..<4) { i in
-//                CustomButton(title1: i.description, action: {}, background: Color.gray.opacity(0.8), forgroundColor: Color.white)
-//            }
-//            CustomButton(title1: "+", action: {}, background: Color.orange, forgroundColor: Color.white)
-//        }
-//        
-//        // Last row with "0" spanning two columns
-//        GridRow {
-//            CustomButton(title1: "0", action: {}, background: Color.gray.opacity(0.8), forgroundColor: Color.white)
-//                .gridCellColumns(2) // Span 2 columns
-//            CustomButton(title1: ".", action: {}, background: Color.gray.opacity(0.8), forgroundColor: Color.white)
-//            CustomButton(title1: "=", action: {}, background: Color.orange, forgroundColor: Color.white)
-//        }
-//    }
-//    .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure grid takes full screen
-//}
-//.ignoresSafeArea(edges: .bottom) // Ignore bottom safe area for full screen
-//.background(Color.black) // Optional: Set back
+#Preview {
+    ContentView()
+}

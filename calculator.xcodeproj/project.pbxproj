@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AB85AC2CFD782D009A92E5 /* layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB85AB2CFD782D009A92E5 /* layout.swift */; };
 		05BE0A802CF82D64009F08D8 /* calculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A7F2CF82D64009F08D8 /* calculatorApp.swift */; };
 		05BE0A822CF82D64009F08D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A812CF82D64009F08D8 /* ContentView.swift */; };
 		05BE0A842CF82D65009F08D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BE0A832CF82D65009F08D8 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05AB85AB2CFD782D009A92E5 /* layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = layout.swift; sourceTree = "<group>"; };
 		05BE0A7C2CF82D64009F08D8 /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BE0A7F2CF82D64009F08D8 /* calculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorApp.swift; sourceTree = "<group>"; };
 		05BE0A812CF82D64009F08D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				05BE0A812CF82D64009F08D8 /* ContentView.swift */,
 				05BE0A832CF82D65009F08D8 /* Assets.xcassets */,
 				05BE0A852CF82D65009F08D8 /* Preview Content */,
+				05AB85AB2CFD782D009A92E5 /* layout.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05BE0A822CF82D64009F08D8 /* ContentView.swift in Sources */,
+				05AB85AC2CFD782D009A92E5 /* layout.swift in Sources */,
 				05BE0A802CF82D64009F08D8 /* calculatorApp.swift in Sources */,
 				05BE0AAD2CF83827009F08D8 /* CustomButton.swift in Sources */,
 			);

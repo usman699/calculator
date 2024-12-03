@@ -1,41 +1,21 @@
 import SwiftUI
+struct CustomButton: View {
+    let title: String
+    let action: () -> Void
+    let background: Color
 
-struct CustomButton :View {
-    var title1:String
-    var action:(() -> Void)
-    var background:Color
-    var forgroundColor :Color
     var body: some View {
-        Button(action: action){
-            HStack{
-                Text(title1)
-            }
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 28))
+                .frame(maxWidth: .infinity, minHeight: 50)
+                .padding()
+                .foregroundColor(.white)
+                .background(background)
+                .cornerRadius(8)
         }
-        
-        .frame(width: 60, height: 60)
+        .frame(width: .infinity, height: .infinity) // Explicitly set the width here
         .background(background)
-        .foregroundStyle(forgroundColor)
-        .clipShape(Circle())
-        .font(. system(size: 22))
-    }
-}
-
-struct CustomButtonlarge :View {
-    var title1:String
-    var action:(() -> Void)
-    var background:Color
-    var forgroundColor :Color
-    var body: some View {
-        Button(action: action){
-            HStack{
-                Text(title1)
-            }
-        }
-        
-        .frame(width: UIScreen.main.bounds.width * 0.5 ,height: 60)
-        .background(background)
-        .foregroundStyle(forgroundColor)
-        .clipShape(Circle())
-        .font(. system(size: 22))
+        .cornerRadius(10) // Circular styles removed for proper rectangular resizing
     }
 }

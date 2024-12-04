@@ -1,13 +1,19 @@
 import SwiftUI
 struct CustomButton: View {
     let title: String
-    let action: () -> Void
+    @Binding var addedString: String  // Binding to an external state
+
     let background: Color
 
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+      
+            addedString = logicController.shared.mainfucntion(title: title)
+            
+            
+        } ) {
             Text(title)
-                .font(.system(size: 28))
+                .font(.system(size: 39))
                 .frame(maxWidth: .infinity, minHeight: 50)
                 .padding()
                 .foregroundColor(.white)
@@ -19,3 +25,4 @@ struct CustomButton: View {
         .cornerRadius(10) // Circular styles removed for proper rectangular resizing
     }
 }
+

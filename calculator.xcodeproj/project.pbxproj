@@ -16,6 +16,7 @@
 		05BE0A9B2CF82D65009F08D8 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A9A2CF82D65009F08D8 /* calculatorUITests.swift */; };
 		05BE0A9D2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0A9C2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift */; };
 		05BE0AAD2CF83827009F08D8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BE0AAC2CF83827009F08D8 /* CustomButton.swift */; };
+		1BC5F7A12CFED66C008F7B28 /* logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC5F7A02CFED66C008F7B28 /* logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		05BE0A9A2CF82D65009F08D8 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		05BE0A9C2CF82D65009F08D8 /* calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05BE0AAC2CF83827009F08D8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		1BC5F7A02CFED66C008F7B28 /* logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		05BE0A7E2CF82D64009F08D8 /* calculator */ = {
 			isa = PBXGroup;
 			children = (
+				1BC5F79D2CFED632008F7B28 /* logic */,
 				05BE0AA92CF837E1009F08D8 /* utils */,
 				05BE0A7F2CF82D64009F08D8 /* calculatorApp.swift */,
 				05BE0A812CF82D64009F08D8 /* ContentView.swift */,
@@ -139,6 +142,14 @@
 				05BE0AAC2CF83827009F08D8 /* CustomButton.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		1BC5F79D2CFED632008F7B28 /* logic */ = {
+			isa = PBXGroup;
+			children = (
+				1BC5F7A02CFED66C008F7B28 /* logic.swift */,
+			);
+			path = logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC5F7A12CFED66C008F7B28 /* logic.swift in Sources */,
 				05BE0A822CF82D64009F08D8 /* ContentView.swift in Sources */,
 				05AB85AC2CFD782D009A92E5 /* layout.swift in Sources */,
 				05BE0A802CF82D64009F08D8 /* calculatorApp.swift in Sources */,
